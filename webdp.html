@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #3a7bc8;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #2c6cb0;
+            border-radius: 4px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+        
+        .content-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3a7bc8;
+        }
+        
+        form {
+            margin-top: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎访问我的网站</h1>
+        <p>一个简单而实用的HTML网页示例</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#services">服务</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="content">
+                <section id="home" class="content-section">
+                    <h2>欢迎来到我们的网站</h2>
+                    <p>这是一个简单的HTML网页示例，展示了如何使用HTML和CSS创建基本的网页布局。这个页面包含了标题、导航栏、内容区域和页脚等常见网页元素。</p>
+                    <p>HTML是构建网页的基础，CSS则用于美化网页的外观。通过结合使用这两种技术，可以创建出美观且功能丰富的网页。</p>
+                    <a href="#about" class="btn">了解更多</a>
+                </section>
+                
+                <section id="about" class="content-section">
+                    <h2>关于我们</h2>
+                    <p>我们是一个致力于提供高质量网页设计服务的团队。我们专注于创建响应式、用户友好的网站，帮助客户在数字世界中建立强大的在线存在。</p>
+                    <p>我们的团队由经验丰富的设计师和开发人员组成，擅长使用最新的网页技术为客户提供最佳解决方案。</p>
+                </section>
+                
+                <section id="services" class="content-section">
+                    <h2>我们的服务</h2>
+                    <ul>
+                        <li>响应式网页设计</li>
+                        <li>网站开发与维护</li>
+                        <li>用户体验优化</li>
+                        <li>搜索引擎优化</li>
+                    </ul>
+                </section>
+                
+                <section id="contact" class="content-section">
+                    <h2>联系我们</h2>
+                    <p>如果您有任何问题或需要我们的服务，请随时与我们联系。</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">提交</button>
+                    </form>
+                </section>
+            </div>
+            
+            <aside class="sidebar">
+                <h3>最新消息</h3>
+                <p>我们刚刚发布了新的网站模板！</p>
+                <p>现在提供免费的网站咨询。</p>
+                <h3>有用的链接</h3>
+                <ul>
+                    <li><a href="#">HTML教程</a></li>
+                    <li><a href="#">CSS指南</a></li>
+                    <li><a href="#">JavaScript基础</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 我的网站. 保留所有权利.</p>
+    </footer>
+    
+    <script>
+        // 简单的表单提交处理
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们会尽快回复您。');
+            this.reset();
+        });
+        
+        // 平滑滚动到锚点
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
