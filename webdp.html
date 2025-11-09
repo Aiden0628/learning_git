@@ -1,253 +1,83 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        nav {
-            background-color: #3a7bc8;
-            padding: 0.5rem;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        
-        nav li {
-            margin: 0 1rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: #2c6cb0;
-            border-radius: 4px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .main-content {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2rem;
-        }
-        
-        .content-section {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-        
-        .sidebar {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        h1, h2, h3 {
-            margin-bottom: 1rem;
-            color: #2c3e50;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #4a90e2;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #3a7bc8;
-        }
-        
-        form {
-            margin-top: 1rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    body {background-color: #f2f2f2}
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; text-align: center; font: 12.0px 'PingFang SC'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px 'PingFang SC'; color: #262626; -webkit-text-stroke: #262626}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #3b7adb}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #262626; -webkit-text-stroke: #262626}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'PingFang SC'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p12 {margin: 0.0px 0.0px 12.0px 0.0px; text-align: center; font: 12.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff}
+    li.li3 {margin: 0.0px 12.0px 0.0px 0.0px; font: 12.0px Arial; color: #ffffff}
+    li.li4 {margin: 0.0px 12.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    li.li8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #262626; -webkit-text-stroke: #262626}
+    li.li11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0000e9; -webkit-text-stroke: #0000e9}
+    span.s1 {font: 24.0px 'PingFang SC'; font-kerning: none; background-color: #3b7adb}
+    span.s2 {font-kerning: none; background-color: #3b7adb}
+    span.s3 {font: 12.0px Arial; font-kerning: none; background-color: #3b7adb}
+    span.s4 {background-color: #2e65bc}
+    span.s5 {font: 12.0px 'PingFang SC'; font-kerning: none; background-color: #2e65bc; -webkit-text-stroke: 0px #ffffff}
+    span.s6 {font: 12.0px Arial; background-color: #2e65bc; -webkit-text-stroke: 0px #000000}
+    span.s7 {font-kerning: none; background-color: #2e65bc}
+    span.s8 {font: 18.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
+    span.s9 {font-kerning: none; background-color: #ffffff}
+    span.s10 {font: 12.0px Arial; font-kerning: none; background-color: #ffffff}
+    span.s11 {font-kerning: none}
+    span.s12 {font: 12.0px Arial; background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s13 {font: 14.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
+    span.s14 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s15 {text-decoration: underline ; font-kerning: none; background-color: #ffffff}
+    span.s16 {font: 12.0px 'PingFang SC'; text-decoration: underline ; font-kerning: none; background-color: #ffffff}
+    span.s17 {font-kerning: none; background-color: #212f3f}
+    span.s18 {font: 12.0px 'PingFang SC'; font-kerning: none; background-color: #212f3f}
+    ul.ul1 {list-style-type: none}
+    ul.ul2 {list-style-type: disc}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>欢迎访问我的网站</h1>
-        <p>一个简单而实用的HTML网页示例</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#about">关于我们</a></li>
-            <li><a href="#services">服务</a></li>
-            <li><a href="#contact">联系我们</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container">
-        <div class="main-content">
-            <div class="content">
-                <section id="home" class="content-section">
-                    <h2>欢迎来到我们的网站</h2>
-                    <p>这是一个简单的HTML网页示例，展示了如何使用HTML和CSS创建基本的网页布局。这个页面包含了标题、导航栏、内容区域和页脚等常见网页元素。</p>
-                    <p>HTML是构建网页的基础，CSS则用于美化网页的外观。通过结合使用这两种技术，可以创建出美观且功能丰富的网页。</p>
-                    <a href="#about" class="btn">了解更多</a>
-                </section>
-                
-                <section id="about" class="content-section">
-                    <h2>关于我们</h2>
-                    <p>我们是一个致力于提供高质量网页设计服务的团队。我们专注于创建响应式、用户友好的网站，帮助客户在数字世界中建立强大的在线存在。</p>
-                    <p>我们的团队由经验丰富的设计师和开发人员组成，擅长使用最新的网页技术为客户提供最佳解决方案。</p>
-                </section>
-                
-                <section id="services" class="content-section">
-                    <h2>我们的服务</h2>
-                    <ul>
-                        <li>响应式网页设计</li>
-                        <li>网站开发与维护</li>
-                        <li>用户体验优化</li>
-                        <li>搜索引擎优化</li>
-                    </ul>
-                </section>
-                
-                <section id="contact" class="content-section">
-                    <h2>联系我们</h2>
-                    <p>如果您有任何问题或需要我们的服务，请随时与我们联系。</p>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">姓名:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">邮箱:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">留言:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">提交</button>
-                    </form>
-                </section>
-            </div>
-            
-            <aside class="sidebar">
-                <h3>最新消息</h3>
-                <p>我们刚刚发布了新的网站模板！</p>
-                <p>现在提供免费的网站咨询。</p>
-                <h3>有用的链接</h3>
-                <ul>
-                    <li><a href="#">HTML教程</a></li>
-                    <li><a href="#">CSS指南</a></li>
-                    <li><a href="#">JavaScript基础</a></li>
-                </ul>
-            </aside>
-        </div>
-    </div>
-    
-    <footer>
-        <p>&copy; 2023 我的网站. 保留所有权利.</p>
-    </footer>
-    
-    <script>
-        // 简单的表单提交处理
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('感谢您的留言！我们会尽快回复您。');
-            this.reset();
-        });
-        
-        // 平滑滚动到锚点
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+<h1 style="margin: 0.0px 0.0px 12.0px 0.0px; text-align: center; font: 24.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1"><b>欢迎访问我的网站</b><b></b></span></h1>
+<p class="p2"><span class="s2">一个简单而实用的</span><span class="s3">HTML</span><span class="s2">网页示例</span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s4"></span><span class="s5">首页</span></li>
+  <li class="li4"><span class="s6"></span><span class="s7">关于我们</span></li>
+  <li class="li3"><span class="s4"></span><span class="s5">服务</span></li>
+  <li class="li4"><span class="s6"></span><span class="s7">联系我们</span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 18.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s8"><b>二次欢迎来到我们的网站</b><b></b></span></h2>
+<p class="p6"><span class="s9">这是一个简单的</span><span class="s10">HTML</span><span class="s9">网页示例，展示了如何使用</span><span class="s10">HTML</span><span class="s9">和</span><span class="s10">CSS</span><span class="s9">创建基本的网页布局。这个页面包含了标题、导航栏、内容区域和页脚等常见网页元素。</span></p>
+<p class="p6"><span class="s10">HTML</span><span class="s9">是构建网页的基础，</span><span class="s10">CSS</span><span class="s9">则用于美化网页的外观。通过结合使用这两种技术，可以创建出美观且功能丰富的网页。</span></p>
+<p class="p7"><span class="s11">了解更多</span></p>
+<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 18.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s8"><b>关于我们</b><b></b></span></h2>
+<p class="p6"><span class="s9">我们是一个致力于提供高质量网页设计服务的团队。我们专注于创建响应式、用户友好的网站，帮助客户在数字世界中建立强大的在线存在。</span></p>
+<p class="p6"><span class="s9">我们的团队由经验丰富的设计师和开发人员组成，擅长使用最新的网页技术为客户提供最佳解决方案。</span></p>
+<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 18.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s8"><b>我们的服务</b><b></b></span></h2>
+<ul class="ul2">
+  <li class="li8"><span class="s12"></span><span class="s9">响应式网页设计</span></li>
+  <li class="li8"><span class="s12"></span><span class="s9">网站开发与维护</span></li>
+  <li class="li8"><span class="s12"></span><span class="s9">用户体验优化</span></li>
+  <li class="li8"><span class="s12"></span><span class="s9">搜索引擎优化</span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 18.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s8"><b>联系我们</b><b></b></span></h2>
+<p class="p6"><span class="s9">如果您有任何问题或需要我们的服务，请随时与我们联系。</span></p>
+<p class="p8"><span class="s9">姓名</span><span class="s10">:</span></p>
+<p class="p8"><span class="s9">邮箱</span><span class="s10">:</span></p>
+<p class="p8"><span class="s9">留言</span><span class="s10">:</span></p>
+<p class="p9"><span class="s2">提交</span></p>
+<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 14.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s13"><b>最新消息</b><b></b></span></h3>
+<p class="p6"><span class="s9">我们刚刚发布了新的网站模板！</span></p>
+<p class="p6"><span class="s9">现在提供免费的网站咨询。</span></p>
+<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 14.0px 'PingFang SC Semibold'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s13"><b>有用的链接</b><b></b></span></h3>
+<ul class="ul2">
+  <li class="li11"><span class="s14"></span><span class="s15">HTML</span><span class="s16">教程</span></li>
+  <li class="li11"><span class="s14"></span><span class="s15">CSS</span><span class="s16">指南</span></li>
+  <li class="li11"><span class="s14"></span><span class="s15">JavaScript</span><span class="s16">基础</span></li>
+</ul>
+<p class="p12"><span class="s17">© 2023 </span><span class="s18">我的网站</span><span class="s17">. </span><span class="s18">保留所有权利</span><span class="s17">.</span></p>
 </body>
 </html>
